@@ -3,9 +3,11 @@ using System.Collections;
 
 public class controller : MonoBehaviour {
 	public GameObject gameover;
-
+	public AudioClip bomb;
+	public bool play = true;
 	public Vector2 velocityUp = new Vector2(0,-2);
 	public Vector2 velocityDown = new Vector2(0,2);
+	public Vector2 velocityStop = new Vector2(0,0);
 	// Use this for initialization
 	void Start () {
 	
@@ -13,18 +15,24 @@ public class controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.UpArrow)) {
-			rigidbody.velocity = velocityUp;
+		if (play == true) {
+			if (Input.GetKey (KeyCode.UpArrow)) {
+				rigidbody.velocity = velocityUp;
+			}
+			if (Input.GetKey (KeyCode.DownArrow)) {
+				rigidbody.velocity = velocityDown;
+			}	
 		}
-		if (Input.GetKey (KeyCode.DownArrow)) {
-			rigidbody.velocity = velocityDown;
-		}	
+		else rigidbody.velocity = velocityStop;
 	}
 
 	void OnCollisionEnter(Collision obj){
 		if (obj.gameObject.tag == "Respawn") {
 			GameObject offer = Instantiate(gameover) as GameObject;
 			generate.stop = true;
+			audio.clip = bomb;
+			audio.Play();
+			play = false;
 		}
 	}
 }
