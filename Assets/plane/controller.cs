@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class controller : MonoBehaviour {
+	public Text Score;
+
 	public GameObject gameover;
 	public AudioClip bomb;
 	public bool play = true;
@@ -33,6 +36,13 @@ public class controller : MonoBehaviour {
 			audio.clip = bomb;
 			audio.Play();
 			play = false;
+		}
+	}
+
+	void OnTriggerExit(Collider other){
+		if (other.tag=="lewat"){
+			int point = int.Parse(Score.text)+1;
+			Score.text=point.ToString();
 		}
 	}
 }

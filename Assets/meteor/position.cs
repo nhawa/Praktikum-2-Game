@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class position : MonoBehaviour {
-	public Vector2 velocity = new Vector2(-4,0);
+	public Vector2 velocity = new Vector2(-4,-2);
 	// Use this for initialization
 
 	void Start () {

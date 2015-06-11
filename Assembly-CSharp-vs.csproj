@@ -48,8 +48,13 @@
   <ItemGroup>
      <Compile Include="Assets\meteor\benturan.cs" />
      <Compile Include="Assets\meteor\generate.cs" />
+     <Compile Include="Assets\meteor\hancur.cs" />
      <Compile Include="Assets\meteor\position.cs" />
      <Compile Include="Assets\plane\controller.cs" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>D:/documen/TI semester 6/Pembuatan Game/Tugas1/Praktikum-2-Game/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -48,11 +48,17 @@
   <ItemGroup>
      <Compile Include="Assets\meteor\benturan.cs" />
      <Compile Include="Assets\meteor\generate.cs" />
+     <Compile Include="Assets\meteor\hancur.cs" />
      <Compile Include="Assets\meteor\position.cs" />
      <Compile Include="Assets\plane\controller.cs" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{D179D8FD-93E4-B36D-73B0-06C11BD7FCDD}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

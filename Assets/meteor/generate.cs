@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class generate : MonoBehaviour {
+
 	public GameObject meteor;
 	public Vector3 pos;
 	// Use this for initialization
@@ -17,7 +18,8 @@ public class generate : MonoBehaviour {
 	}
 
 	void CreateObstacle(){
-		pos.y = Random.Range (-4, 4);
+		pos.y = Random.Range (-3, 6);
 		Instantiate (meteor, new Vector3 (9, pos.y, -0.5f), Quaternion.identity);
 	}
+
 }
